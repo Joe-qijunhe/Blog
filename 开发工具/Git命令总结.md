@@ -6,16 +6,22 @@ Commit前记得检查一下自己的用户信息，GitHub上提交记录里显�
     仅在当前本地库范围内有效。信息保存位置：./.git/config 文件
 
     ```bash
+    # 查看
+    git config --list --local
+    # 设置
     git config user.name tom_pro
     git config user.email goodMorning_pro@atguigu.com
     ```
-
+    
 -   系统用户级别：
-    登录当前操作系统的用户范围。信息保存位置：~/.gitconfig 文件。也可以使用`git config global --list `查看。
+    登录当前操作系统的用户范围。信息保存位置：~/.gitconfig 文件。
 
     ```bash
+    # 查看
+    git config --list --global
+    # 修改
     git config --global user.name tom_glb
-    git config --global goodMorning_pro@atguigu.com
+    git config --global user.email goodMorning_pro@atguigu.com
     ```
 
 就近原则：项目级别优先于系统用户级别，二者都有时采用项目级别的签名。
