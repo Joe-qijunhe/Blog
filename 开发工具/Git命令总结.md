@@ -370,3 +370,20 @@ $ git pull 远程库地址别名 远程分支名
 git rm -r --cached dir
 ```
 
+# 恢复之前版本
+
+方法一：如果想恢复到之前某个提交的版本，且那个版本之后提交的版本都不要了
+
+```
+git reset --hard 版本号
+git push -f
+```
+
+方法二：保留那个版本之后提交的版本
+
+```
+git revert -n 版本号
+git commit -m "revert add text.txt" 
+git push
+```
+
